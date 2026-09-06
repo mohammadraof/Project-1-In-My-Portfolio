@@ -1,0 +1,19 @@
+* {
+    margin: 0px;
+    direction: rtl;
+}
+
+.sticky {
+    position: sticky;
+    background-color: aquamarine;
+    top: 0;
+    padding: 10px;
+}
+
+.text {
+    background-color: rgb(149, 149, 149);
+}
+
+p {
+    height: 2000px;
+}

@@ -1,0 +1,15 @@
+* {
+    direction: rtl;
+}
+
+.sticky-title {
+    position: sticky;
+    top: 0;
+    /* وقتی به بالای صفحه رسید، می‌چسبد */
+    background: #90caf9;
+    padding: 10px;
+}
+
+.text {
+    background: #eee;
+}

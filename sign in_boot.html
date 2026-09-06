@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image/my logo.png">
+    <link rel="stylesheet" href="sign in_boot.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <title>ورود | می من</title>
+</head>
+<body>
+    <div class="div-top">
+        <img src="image/my logo.png" alt="logo">
+    </div>
+    <h2 class="text-center text-primary-emphasis">ورود</h2>
+  <div class="div-form">
+    <div class="container m-auto">
+        <div class="col-7">
+            <form action="#" onsubmit="return validation()" class="bg-light p-3">
+                <div class="form-gruop mb-3">
+                        <label for="user" class="font-weight-regular">نام کاربری :</label>
+                        <input type="text" name="user" class="form-control" id="user" autocomplete="off">
+                        <span id="username" class="text-danger font-weight-regular"></span>
+                    </div>
+
+                    <div class="form-gruop mb-3">
+                        <label for="pass" class="font-weight-regular">رمز عبور :</label>
+                        <input type="password" name="pass" class="form-control" id="pass" autocomplete="off">
+                        <span id="passwords" class="text-danger font-weight-regular"></span>
+                    </div>
+                    <input type="submit" name="submit" value="ارسال" class="btn btn-primary ">
+                     <a href="mi.html" class="text-decoration-none">
+                        <input type="button" name="reset" value="بازگشت" class="btn btn-danger" autocomplete="off">
+                    </a>
+                &emsp;&emsp;&emsp; ایجاد حساب 
+                <a href="new name log.html">ثبت نام</a>
+            </form>
+        </div>
+    </div>
+  </div>
+  <script>
+        function validation() {
+            var user = document.getElementById("user").value;
+            var pass = document.getElementById("pass").value;
+
+            document.getElementById("username").innerHTML = '';
+            document.getElementById("passwords").innerHTML = '';
+
+            if (user == "") {
+                document.getElementById("username").innerHTML = 
+                "**نام کابری خود را وارد کنید ";
+                return false;
+            }
+
+            if (user.length <= 2 || user.length > 20) {
+                document.getElementById("username").innerHTML = 
+                "**نام کاربری باید بین 2 تا 20 کاراکتر باشد ";
+                return false;
+            }
+
+            if (!isNaN(user)) {
+                document.getElementById("username").innerHTML = 
+                "**فقط کاراکتر مجاز است";
+                return false;
+            }
+
+            if (pass == "") {
+                document.getElementById("passwords").innerHTML = 
+                "**رمز عبور خود را وارد کنید ";
+                return false;
+            }
+
+            if (pass.length < 5 || pass.length > 20) {
+                document.getElementById("passwords").innerHTML = 
+                "**رمز عبور باید بین 5 تا 20 کاراکتر باشد ";
+                return false;
+            }
+
+            if (!isNaN(user)) {
+                document.getElementById("username").innerHTML = 
+                "**فقط کاراکتر مجاز است";
+                return false;
+            }
+
+            return alert("با موفقیت وارد شده اید !");
+
+        }
+    </script>   
+</body>
+</html>

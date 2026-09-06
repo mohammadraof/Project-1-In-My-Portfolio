@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image/my logo.png" type="image/png">
+    <link rel="stylesheet" href="new name log.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <title>ثبت نام | می من</title>
+</head>
+<body>
+    <div class="div-top">
+        <img src="image/my logo.png" alt="logo">
+    </div>
+    <h2 class="text-center text-primary-emphasis">ثبت نام</h2>
+
+    <div class="div-form">
+        <div class="container">
+
+        <div class="col-7">
+            <form action="#" onsubmit="return validation()" class="bg-light p-3">
+                <div class="form-group mb-2">
+                    <label for="name" class="font-weight-regular">نام :</label>
+                    <input type="text" name="name" class="form-control" id="name" autocomplete="off">
+                    <span id="Name" class="text-danger font-weight-regular"></span>
+                </div>
+
+                <div class="form-group mb-2">
+                    <label for="emails" class="font-weight-regular">ایمیل :</label>
+                    <input type="email" name="email" class="form-control" id="emails" autocomplete="off">
+                    <span id="emailids" class="text-danger font-weight-regular"></span>
+                </div>
+
+                <div class="form-group mb-2">
+                    <label for="user" class="font-weight-regular">نام کاربری :</label>
+                    <input type="text" name="user" class="form-control" id="user" autocomplete="off">
+                    <span id="username" class="text-danger font-weight-regular"></span>
+                </div>
+
+                <div class="form-group mb-2">
+                    <label for="pass" class="font-weight-regular">رمزعبور :</label>
+                    <input type="password" name="pass" class="form-control" id="pass" autocomplete="off">
+                    <span id="passwords" class="text-danger font-weight-regular"></span>
+                </div>
+
+                <div class="form-group mb-2">
+                    <label for="conpass" class="font-weight-regular">تکرار رمز عبور :</label>
+                    <input type="password" name="conpass" class="form-control" id="conpass" autocomplete="off">
+                    <span id="confrmpass" class="text-danger font-weight-regular"></span>
+                </div>
+
+                <div class="form-group mb-2">
+                    <label for="mobile Number" class="font-weight-regular">شماره موبایل :</label>
+                    <input type="tel" name="mobile" class="form-control" id="mobile Number" autocomplete="off">
+                    <span id="mobileno" class="text-danger font-weight-regular"></span>
+                </div>
+
+                <input type="submit" name="submit" value="ارسال" class="btn btn-primary" autocomplete="off">
+                <a href="mi.html" class="text-decoration-none">
+                    <input type="button" name="reset" value="بازگشت" class="btn btn-danger" autocomplete="off">
+                </a>
+                &emsp;&emsp;&emsp;قبلا حساب داشته اید ؟
+                <a href="sign in_boot.html">ورود</a>
+            </form>
+            <br/><br/>
+        </div>
+    </div>
+  </div>
+    
+    <script type="text/Javascript">
+        function validation() {
+            var name = document.getElementById("name").value;
+            var user = document.getElementById("user").value;
+            var pass = document.getElementById("pass").value;
+            var confirmpass = document.getElementById("conpass").value;
+            var mobileNumber = document.getElementById("mobilenumber").value;
+            var emails = document.getElementById("emails").value;
+
+            document.getElementById("Name").innerHTML = "";
+            document.getElementById("emailids").innerHTML = "";
+            document.getElementById("username").innerHTML = "";
+            document.getElementById("passwords").innerHTML = "";
+            document.getElementById("confrmpass").innerHTML = "";
+
+            if (Name == "") {
+                document.getElementById("Name").innerHTML = 
+                "**لطفا نام را تکمیل کنید ";
+                return false;
+            }
+
+            if (emails == "") {
+                document.getElementById("emailids").innerHTML = 
+                "**لطفاایمیل را تکمیل کنید ";
+                return false;
+            }
+
+            if (emails.indexOf("@") <= 0) {
+                document.getElementById("emailids").innerHTML = 
+                "**ایمیل شما اشتباه وارد شده است "
+                return false;
+            }
+
+            if (
+                emails.charAt(emails.length - 5) != 1 "." &&
+                emails.charAt(emails.length - 4) != 1 "." &&
+                emails.charAt(emails.length - 3) != 1 "."
+            ) {
+                document.getElementById("emailids").innerHTML = 
+                "**ایمیل شما اشتباه وارد شده است ";
+                return false;
+            }
+
+            if (user == "") {
+                document.getElementById("username").innerHTML = 
+                "** please fill the username field";
+                return false;
+            }
+
+            if (user.length <= 2 || user.length > 20) {
+                document.getElementById("username").innerHTML = 
+                "** please fill the username field";
+                return false;
+            }
+
+            if (!isNaN(user)) {
+                document.getElementById("username").innerHTML = 
+                "** please fill the username field";
+                return false;
+            }
+
+            if (pass == "") {
+                document.getElementById("passwords").innerHTML = 
+                "** please fill the passsword field";
+                return false;
+            }
+
+            if (pass.length < 5 || pass.length > 20) {
+                document.getElementById("username").innerHTML = 
+                "** password length must be between 5 and 20";
+                return false;
+            }
+
+            if (pass != confirmpass) {
+                document.getElementById("confrmpass").innerHTML = 
+                "** passsword mismatch";
+                return false;
+            }
+
+            if (confirmpass == "") {
+                document.getElementById("confrmpass").innerHTML = 
+                "** please fill the confirmpassword field";
+                return false;
+            }
+
+            if (mobileNumber == "") {
+                document.getElementById("mobileno").innerHTML = 
+                "** please fill the mobile number field";
+                return false;
+            }
+
+            if (isNaN(mobileNumber)) {
+                document.getElementById("mobileno").innerHTML = 
+                "** mobile number must be 11 digits only not charcters";
+                return false;
+            }
+        }
+    </script>   
+</body>
+</html>

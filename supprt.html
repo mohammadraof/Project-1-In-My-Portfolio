@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image/my logo.png">
+    <link rel="stylesheet" href="supprt.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <title>پشتیبان | می من</title>
+</head>
+<body>
+    <div class="div-top">
+        <img src="image/my logo.png" alt="logo">
+    </div>
+    <h2 class="text-center text-primary-emphasis">پشتیبان</h2>
+
+    <h6 class="text-center text-secondary mt-5">برای ارتباط با ما شماره موبایل یا ایمیل خود را وارد نمایید </h6>
+
+    <div class="div-form">
+    <div class="container m-auto">
+        <div class="col-7">
+            <form action="#" onsubmit="return validation()" class="bg-light p-3">
+                <div class="form-group mb-2">
+                    <label for="mobile Number" class="font-weight-regular">شماره موبایل یا ایمیل :</label>
+                    <input type="tel" name="mobile" class="form-control" id="mobile Number" autocomplete="off">
+                    <span id="mobileno" class="text-danger font-weight-regular"></span>
+                </div>
+
+                <div class="form-gruop mb-3">
+                    <legend class="text">پیام: 
+                    <textarea name="address" id="" class="w-100 border-white p-2"></textarea>
+                    </legend>
+                </div>
+                <input type="submit" name="submit" value="ارسال" class="btn btn-primary">
+                <a href="mi.html" class="text-decoration-none">
+                    <input type="button" name="reset" value="بازگشت" class="btn btn-danger" autocomplete="off">
+                </a>
+            </form>
+        </div>
+    </div>
+    </div>
+
+
+    <script type="text/Javascript">
+        function validation() {
+            var mobileNumber = document.getElementById("mobilenumber").value;
+
+            document.getElementById("mobileno").innerHTML = "";
+
+
+            if (mobileNumber == "") {
+                document.getElementById("mobileno").innerHTML = 
+                "** please fill the mobile number field";
+                return false;
+            }
+
+            if (isNaN(mobileNumber)) {
+                document.getElementById("mobileno").innerHTML = 
+                "** mobile number must be 11 digits only not charcters";
+                return false;
+            }
+        }
+    </script>   
+    
+</body>
+</html>

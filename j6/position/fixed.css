@@ -1,0 +1,21 @@
+* {
+    direction: rtl;
+}
+
+.fixed-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px;
+    background-color: aquamarine;
+    border-radius: 10px;
+
+}
+
+.text {
+    background-color: rgb(149, 149, 149);
+}
+
+p {
+    height: 2000px;
+}

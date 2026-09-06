@@ -1,0 +1,148 @@
+@font-face {
+    font-family: ES;
+    src: url(font/Estedad[wght\,kshd].ttf);
+}
+/*------------------*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    direction: rtl;
+    font-family: es;
+}
+/*------------------*/
+.div-logo{
+    height: 180px;
+}
+/*------------------*/
+.div-logo div:nth-of-type(1){
+    width: 10%;
+}
+/*------------------*/
+.div-logo div:nth-of-type(2){
+    height: 30%;
+    margin-top: 6.2%;
+}
+/*------------------*/
+.div-logo div:nth-of-type(2) input{
+    padding: 2% 3%;
+}
+/*------------------*/
+.div-logo div:nth-of-type(3){
+    width: 20%;
+    height: 30%;
+    margin-right: 15%;
+    margin-top: 6%;
+    display: flex;
+}
+/*------------------*/
+.div-logo div:nth-of-type(3) button:hover{
+    cursor: pointer;
+}
+/*------------------*/
+nav{
+    height: 5%;
+}
+/*------------------*/
+nav ul{
+    margin-right: 40px;
+    list-style-type: none;
+}
+/*------------------*/
+nav ul:hover{
+    cursor: pointer;
+}
+/*------------------*/
+.swiper{
+    z-index: 0;
+}
+/*------------------*/
+.h4-pishnahadi{
+    color: red;
+}
+/*------------------*/
+.p-pishnahad{
+    margin-right: 2%;
+    font-size: 20px;
+}
+/*------------------*/
+.div-pishnahadi{
+    width: 94.5%;
+    height: 570px;
+    background-color: rgba(249, 249, 249 , 0.54);
+    margin-right: 2%;
+}
+/*------------------*/
+.div-mahsolat{
+    margin: 2% 1%;
+}
+/*------------------*/
+.img-mahsolat{
+    width: 21vw;
+    height: 42vh;
+}
+/*------------------*/
+.div-mahsolat div:nth-of-type(1){
+    height: 12%;
+}
+/*------------------*/
+.btn1{
+    background-color: #0288d1;
+    border: #0288d1;
+    color: rgb(249, 244, 245);
+}
+/*------------------*/
+.btn1:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px #0288d1;
+}
+/*------------------*/
+.btn2{
+    background-color: #193366;
+    border: #193366;
+    color: rgb(249, 244, 245);
+}
+/*------------------*/
+.btn2:hover{
+    cursor: pointer;
+    box-shadow: 0.7px 0.7px 0.5px #193366;
+}
+/*------------------*/
+.div-mahsolat div:nth-of-type(2){
+    direction: ltr !important;
+}
+/*------------------*/
+.div-mahsolat div:nth-of-type(2) button {
+    width: 40px;
+    height: 30px;
+    background-color: #da1e28;
+    color: white;
+    border: #de1e28;
+    margin-left: 75px;
+}
+/*------------------*/
+.arzesh{
+    direction: ltr !important;
+}
+/*------------------*/
+.nav-footer{
+    height: 8%;
+    background-color: rgb(218, 218, 218);
+    display: none;
+}
+.nav-footer button{
+    width: 100px;
+    height: 50px;
+}
+/*------------------*/
+.div-support{
+    width: 50px;
+    height: 50px;
+    background-color: #e4e4e4;
+    border: 1px solid white;
+    border-radius: 100%;
+    position: fixed;
+    right: 0px;
+    bottom: 100px;
+    z-index: 1;
+}

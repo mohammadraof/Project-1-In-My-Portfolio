@@ -1,0 +1,68 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    direction: rtl;
+}
+
+.mega-menu {
+    position: relative;
+}
+
+.mega-btn {
+    width: 200px;
+    height: 30px;
+}
+
+.menu-panel {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+
+}
+
+.mega-menu:hover .menu-panel {
+    display: flex;
+}
+
+/* آیتم */
+.item {
+    padding: 12px;
+    cursor: pointer;
+    text-align: center;
+    width: 200px;
+}
+
+.item:hover {
+    background-color: #bec8c8;
+}
+
+/* پنل */
+.panel {
+    position: absolute;
+    top: 0;
+    right: 200px;
+    /* RTL */
+    width: 200px;
+    height: auto;
+    background: #e0ffff;
+    display: none;
+    padding: 20px;
+}
+
+/* جادوی اصلی */
+.item-wrap:hover .panel {
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.panel ul li {
+    padding: 8px 0;
+}
